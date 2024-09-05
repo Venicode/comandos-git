@@ -18,7 +18,7 @@ git remote add origin https://github.com/username/repositorio.git
 ```
 <i> Exemplo com o GitHub (substitua o link com o do seu repositório remoto).</i>
 
-## ⚡ Clocando um repositório remoto
+## ⚡ Clonando um repositório remoto
 
 Caso já tenha um repositório criado e deseja apenas trazê-lo para a sua máquina:
 
@@ -28,7 +28,7 @@ git clone https://github.com/username/repositorio.git
 
 ## ➕ Adicionando conteúdo para o commit
 
-Antes de realizar um commit, você precisa adicionar as mudanças e novos arquivos que deseja mandar para o repositório remoto:
+Antes de realizar um commit, você precisa adicionar as mudanças e novos arquivos no staging:
 
 Adicionando um arquivo diretamente:
 
@@ -44,7 +44,7 @@ Adicionando todas as mudanças realizadas:
 git add .
 ```
 
-## ➖ Removendo uma alteração (apenas para não ir para o commit)
+## ➖ Removendo um arquivo do staging
 
 O <b>git restore</b> remove os arquivos que foram inseridos para o próximo commit, mas <b>não desfaz as alterações nos arquivos do seu projeto.</b>
 
@@ -57,7 +57,7 @@ Se deseja remover todos os arquivos que tenha adicionado:
 git restore -- staged .
 ```
 
-## 🔍 Verificando o status atual do seu repositório local
+## 🔍 Visualizando o status atual do seu repositório local
 
 Para verificar quais arquivos já foram e não foram adicionados para o commit:
 ```
@@ -91,4 +91,62 @@ Para enviar seu commit para o repositório remoto.
 
 ```
 git push -u origin nome_branch
+```
+## 🔍 Visualizando o histórico de commits
+Para visualizar todos os commits já feitos:
+
+```
+git log
+```
+## 📝 Alterando a mensagem do último commit
+Para alterar a mensagem do último commit que foi feito:
+
+```
+git commit --amend -m "sua mensagem nova"
+```
+## ↩️ Desfazando um commit do HEAD
+Para desfazer o último commit que foi feito sem desfazer as alterações dos arquivos no staging, apenas removendo o apontamento dele pelo HEAD (sempre aponta para o commit atual realizado) e mantendo as alterações nos arquivos reais do seu projeto:
+
+```
+git reset --soft
+```
+
+## ↩️ Desfazando um commit do HEAD e staging
+Para desfazer o último commit que foi feito desfazendo as alterações dos arquivos no staging e removendo o apontamento dele pelo HEAD (sempre aponta para o commit atual realizado) e mantendo as alterações nos arquivos reais do seu projeto:
+
+```
+git reset --mixed
+```
+## ↩️❗ Desfazando um commit do HEAD, staging e as alterações do seu projeto
+Para desfazer o último commit que foi feito desfazendo as alterações dos arquivos no staging e removendo o apontamento dele pelo HEAD (sempre aponta para o commit atual realizado) e <b>removendo as alterações nos arquivos reais do seu projeto</b>:
+
+```
+git reset --hard
+```
+
+## ⬇️ Atualizando seu projeto local através do pull
+Caso você ou outra pessoa que está trabalhando no mesmo projeto tenha feito alguma atualização e queira atualizar no seu repositório local:
+```
+git pull
+```
+## 🔨 Trocando de branch ou criando uma nova
+
+Pra trocar de branch ou criar uma nova:
+```
+git checkout -b nome_branch
+```
+## 🔍 Visualizar o último commit de cada uma das branchs
+
+Para verificar o último commit de cada uma das branchs criadas:
+
+```
+git branch -v
+```
+
+## ❌ Deletando uma branch
+
+Para deletar uma branch criada:
+
+```
+git branch -d nome_branch
 ```
