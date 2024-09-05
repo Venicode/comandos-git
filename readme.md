@@ -1,5 +1,5 @@
 # 📚 Principais Comandos do GIT
-Repositório para exempificar e resumir os principais comandos utilizados no GIT e qual situação serve cada um deles!
+Repositório para exemplificar e resumir os principais comandos utilizados no GIT e qual situação serve cada um deles!
 
 ## ✨ Inicializando um repositório
 
