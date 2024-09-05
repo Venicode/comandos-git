@@ -87,7 +87,8 @@ git commit -m "sua mensagem do commit"
 
 ## 🚀 Enviando seu commit através do push
 
-Para enviar seu commit para o repositório remoto:
+Para enviar seu commit para o repositório remoto.
+
 ```
-git push
+git push -u origin nome_branch
 ```
