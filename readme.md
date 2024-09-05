@@ -129,11 +129,17 @@ Caso você ou outra pessoa que está trabalhando no mesmo projeto tenha feito al
 ```
 git pull
 ```
-## 🔨 Trocando de branch ou criando uma nova
+## ➕ Criando uma nova branch
 
-Pra trocar de branch ou criar uma nova:
+Pra criar uma nova branch:
 ```
 git checkout -b nome_branch
+```
+## 🔨 Trocando de branch
+
+Pra trocar de branch:
+```
+git checkout nome_branch
 ```
 ## 🔍 Visualizar o último commit de cada uma das branchs
 
@@ -149,4 +155,11 @@ Para deletar uma branch criada:
 
 ```
 git branch -d nome_branch
+```
+
+## 🔀 Realizando o merge entre duas branchs
+
+Antes de realizar o merge, verifique se está na branch que vai receber as novas alterações. Após disso, execute o comando:
+```
+git merge branch_origem
 ```
