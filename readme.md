@@ -66,15 +66,15 @@ git status
 
 O que está em vermelho são os arquivos que ainda não foram adicionados:
 
-![exemplo_git_vermelho](image-6.png)
+![exemplo_git_vermelho](images/image-6.png)
 
 O que está em verde são os arquivos que já foram adicionados:
 
-![exemplo_git_verde](image-5.png)
+![exemplo_git_verde](images/image-5.png)
 
 E caso não tenha nada novo para adicionar, aparecerá esta mensagem:
 
-![exemplo_git_nada](image-8.png)
+![exemplo_git_nada](images/image-8.png)
 
 ## 📦 Realizando um commit
 
