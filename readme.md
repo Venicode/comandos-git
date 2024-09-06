@@ -2,7 +2,7 @@ Languages: [English](readme.md) | [Portuguese](readme-br.md)
 
 # 📚 Main Commands in GIT
 
-This repository was created to simply and review the main commands used in GIT and what each of them is for!
+This repository was created to simplify and review the main commands used in GIT and what each of them is for!
 
 ## ✨ Initializing a repository
 
