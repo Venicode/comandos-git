@@ -1,12 +1,7 @@
 Languages: [Portuguese](readme-br.md) | [English](readme.md)
 
-<center>
-
-!["git-icon"](images/Git-Icon.png)
-
-</center>
-
 # 📚 Main Commands in GIT
+
 This repository was created to simply and review the main commands used in GIT and what each of them is for!
 
 ## ✨ Initializing a repository
