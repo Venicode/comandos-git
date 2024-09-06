@@ -1,4 +1,4 @@
-Languages: [Portuguese](readme-br.md) | [English](readme.md)
+Languages: [English](readme.md) | [Portuguese](readme-br.md)
 
 # 📚 Main Commands in GIT
 

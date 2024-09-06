@@ -1,4 +1,4 @@
-Idiomas: [Português](readme-br.md) | [Inglês](readme.md)
+Idiomas: [Inglês](readme.md) | [Português](readme-br.md)
 
 # 📚 Principais Comandos do GIT
 Repositório para exempificar e resumir os principais comandos utilizados no GIT e qual situação serve cada um deles!
