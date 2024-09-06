@@ -167,11 +167,7 @@ git branch -d branch_name
 ## 🔀 Merging between two branches
 
 Before do a merge, check if you are in the branch that will receive the update. After that, type the command below:
+
 ```
-<<<<<<< HEAD
 git merge origin_branch
 ```
-=======
-git merge branch_origem
-```
->>>>>>> 8ab38458c80061712238331f01353fcaf142e85e
