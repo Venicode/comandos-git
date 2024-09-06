@@ -1,165 +1,172 @@
-# 📚 Principais Comandos do GIT
-Repositório para exempificar e resumir os principais comandos utilizados no GIT e qual situação serve cada um deles!
+Languages: [Portuguese](readme-br.md) | [English](readme.md)
 
-## ✨ Inicializando um repositório
+# 📚 Main Commands in GIT
+This repository was created to simply and review the main commands used in GIT and what each of them is for!
 
-Tendo o GIT instalado e configurado suas credenciais, basta abrir o Git Bash e inserir o comando para inicializar o git dentro da pasta do seu projeto:
+## ✨ Initializing a repository
+
+After installing GIT and configuration your credentials, open Git Bash by right-clicking on your project folder and type the command below:
 
 ```
 git init
 ```
 
-## ✔️ Conectando com o repositório remoto
+## ✔️ Connecting with remote repository
 
-Para vincular o repositório local (sua máquina) com o repositório remoto (GitHub ou outra plataforma de hospedagem):
-
+To connect your local repository with the remote one:
 ```
-git remote add origin https://github.com/username/repositorio.git
+git remote add origin https://github.com/username/repository.git
 ```
-<i> Exemplo com o GitHub (substitua o link com o do seu repositório remoto).</i>
+<i>This link is just a example, replace with yours.</i>
 
-## ⚡ Clonando um repositório remoto
+## ⚡ Cloning a remote repository
 
-Caso já tenha um repositório criado e deseja apenas trazê-lo para a sua máquina:
-
+If you already have a remote repository, you can just clone this into your folder:
 ```
-git clone https://github.com/username/repositorio.git
+git clone https://github.com/username/repository.git
 ```
 
-## ➕ Adicionando conteúdo para o commit
+## ➕ Adding files in your commit
 
-Antes de realizar um commit, você precisa adicionar as mudanças e novos arquivos no staging:
+Before do a commit, you need add your new and change files to the staging area.
 
-Adicionando um arquivo diretamente:
-
+Adding just one file:
 ```
-git add nome_arquivo
+git add file_name
 ```
-Adicionando um arquivo que está dentro de outra pasta:
+Adding a file that is in another folder:
 ```
-git add pasta/nome_arquivo
+git add folder/file_name
 ```
-Adicionando todas as mudanças realizadas:
+Adding all the files and changes:
 ```
 git add .
 ```
 
-## ➖ Removendo um arquivo do staging
+## ➖ Removing a file in the stating area
 
-O <b>git restore</b> remove os arquivos que foram inseridos para o próximo commit, mas <b>não desfaz as alterações nos arquivos do seu projeto.</b>
+To remove a file in the staging area (this not undo your changes in your real files project):
 
-Caso tenha adicionando um arquivo errado no exemplo anterior, você pode retirá-lo:
 ```
-git restore -- staged nome_arquivo
+git restore -- staged file_name
 ```
-Se deseja remover todos os arquivos que tenha adicionado:
+If you want remove all them:
 ```
 git restore -- staged .
 ```
 
-## 🔍 Visualizando o status atual do seu repositório local
+## 🔍 Checking status in the staging area
 
-Para verificar quais arquivos já foram e não foram adicionados para o commit:
+To check which files is already in the staging and which is not in:
 ```
 git status
 ```
 
-O que está em vermelho são os arquivos que ainda não foram adicionados:
+What's in red is the files which is not in the staging area yet:
 
 ![exemplo_git_vermelho](images/image-6.png)
 
-O que está em verde são os arquivos que já foram adicionados:
+What's in green is the files which is in the staging area:
 
 ![exemplo_git_verde](images/image-5.png)
 
-E caso não tenha nada novo para adicionar, aparecerá esta mensagem:
+And if you don't have any files to add in the staging area:
 
 ![exemplo_git_nada](images/image-8.png)
 
-## 📦 Realizando um commit
+## 📦 Doing a commit
 
-Para realizar um commit, onde vai preparar todas as alterações adicionados para o envio ao repositório remoto:
+To do a commit, which will prepare all the files in the staging area to be push late:
 
 ```
-git commit -m "sua mensagem do commit"
+git commit -m "your message here"
 ```
-<i>Importante que sua mensagem explique qual mudança ou novo arquivo está adicionando ao seu projeto.</i>
 
-## 🚀 Enviando seu commit através do push
+<i>Be careful when writing a message, be sure that you are explain what the commit is for.</i>
 
-Para enviar seu commit para o repositório remoto.
+## 🚀 Doing a push
 
+To do a push to your remote repository:
 ```
 git push -u origin nome_branch
 ```
-## 🔍 Visualizando o histórico de commits
-Para visualizar todos os commits já feitos:
+## 🔍 Checking your commit history
+
+To check all commits that you did:
 
 ```
 git log
 ```
-## 📝 Alterando a mensagem do último commit
-Para alterar a mensagem do último commit que foi feito:
+
+## 📝 Updating your last commit message
+
+To update the last commit:
 
 ```
-git commit --amend -m "sua mensagem nova"
+git commit --amend -m "your new message here"
 ```
-## ↩️ Desfazando um commit do HEAD
-Para desfazer o último commit que foi feito sem desfazer as alterações dos arquivos no staging, apenas removendo o apontamento dele pelo HEAD (sempre aponta para o commit atual realizado) e mantendo as alterações nos arquivos reais do seu projeto:
+## ↩️ Undoing a commit in the HEAD
+
+To undo the last commit that was did without undo the changes in the staging area, just in the HEAD (which always point in the last commit):
 
 ```
 git reset --soft
 ```
 
-## ↩️ Desfazando um commit do HEAD e staging
-Para desfazer o último commit que foi feito desfazendo as alterações dos arquivos no staging e removendo o apontamento dele pelo HEAD (sempre aponta para o commit atual realizado) e mantendo as alterações nos arquivos reais do seu projeto:
+## ↩️ Undoing a commit in the HEAD and in the staging area
+
+To undo the last commit in the HEAD (which always point in the last commit) and the staging area:
 
 ```
 git reset --mixed
 ```
-## ↩️❗ Desfazando um commit do HEAD, staging e as alterações do seu projeto
-Para desfazer o último commit que foi feito desfazendo as alterações dos arquivos no staging e removendo o apontamento dele pelo HEAD (sempre aponta para o commit atual realizado) e <b>removendo as alterações nos arquivos reais do seu projeto</b>:
+## ↩️❗ Undoing a commit in the HEAD, in the staging area and in your project
+
+To undo the last commit in the HEAD (which always point in the last commit) and the staging area <b>AND IN YOUR PROJECT:</b>
 
 ```
 git reset --hard
 ```
 
-## ⬇️ Atualizando seu projeto local através do pull
-Caso você ou outra pessoa que está trabalhando no mesmo projeto tenha feito alguma atualização e queira atualizar no seu repositório local:
+## ⬇️ Updating your project by pull
+
+In case you and another person is working in the same project and you want get the changes that was did and update in your local repository:
+
 ```
 git pull
 ```
-## ➕ Criando uma nova branch
 
-Pra criar uma nova branch:
-```
-git checkout -b nome_branch
-```
-## 🔨 Trocando de branch
+## ➕ Creating a new branch
 
-Pra trocar de branch:
+To create a new branch:
 ```
-git checkout nome_branch
+git checkout -b branch_name
 ```
-## 🔍 Visualizar o último commit de cada uma das branchs
+## 🔨 Swapping branches
 
-Para verificar o último commit de cada uma das branchs criadas:
+To swap to another branch already created:
+```
+git checkout branch_name
+```
+## 🔍 Checking the last commit in each branch
+
+To check the last commit in each branch already created:
 
 ```
 git branch -v
 ```
 
-## ❌ Deletando uma branch
+## ❌ Deleting a branch
 
-Para deletar uma branch criada:
+To delete a branch:
 
 ```
-git branch -d nome_branch
+git branch -d branch_name
 ```
 
-## 🔀 Realizando o merge entre duas branchs
+## 🔀 Merging between two branches
 
-Antes de realizar o merge, verifique se está na branch que vai receber as novas alterações. Após disso, execute o comando:
+Before do a merge, check if you are in the branch that will receive the update. After that, type the command below:
 ```
-git merge branch_origem
+git merge origin_branch
 ```
