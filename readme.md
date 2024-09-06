@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 Languages: [Portuguese](readme-br.md) | [English](readme.md)
+=======
+# 📚 Principais Comandos do GIT
+Repositório para exemplificar e resumir os principais comandos utilizados no GIT e qual situação serve cada um deles!
+>>>>>>> 8ab38458c80061712238331f01353fcaf142e85e
 
 # 📚 Main Commands in GIT
 This repository was created to simply and review the main commands used in GIT and what each of them is for!
@@ -168,5 +173,10 @@ git branch -d branch_name
 
 Before do a merge, check if you are in the branch that will receive the update. After that, type the command below:
 ```
+<<<<<<< HEAD
 git merge origin_branch
 ```
+=======
+git merge branch_origem
+```
+>>>>>>> 8ab38458c80061712238331f01353fcaf142e85e
